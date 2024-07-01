@@ -18,6 +18,8 @@ ENV jspwiki_workDir /var/jspwiki/work
 ENV jspwiki_xmlUserDatabaseFile /var/jspwiki/etc/userdatabase.xml
 ENV jspwiki_xmlGroupDatabaseFile /var/jspwiki/etc/groupdatabase.xml
 ENV jspwiki_use_external_logconfig true
+ENV jspwiki_interWikiRef_Notes Notes://%s
+ENV jspwiki_interWikiRef_abp abp:%s
 
 #
 # install unzip utility
