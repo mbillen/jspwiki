@@ -1,4 +1,4 @@
-[![GitHub Release](https://img.shields.io/github/v/release/mbillen/jspwiki.svg?style=flat-square)](https://github.com/mbillen/jspwiki/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/tag/mbillen/jspwiki.svg?style=flat-square)](https://github.com/mbillen/jspwiki/tags)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mbillen/jspwiki/docker-publish.yml?label=docker-publish&logo=github&style=flat-square)](https://github.com/mbillen/jspwiki/actions?workflow=docker-publish)
 
 ## About
