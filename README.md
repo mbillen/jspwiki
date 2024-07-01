@@ -39,3 +39,7 @@ jspwiki
 ├── logs
 └── work
 ```
+___
+## Changes to the official [Docker image](https://jspwiki-wiki.apache.org/Wiki.jsp?page=Docker)
+___
+## Customizing
