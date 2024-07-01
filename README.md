@@ -3,10 +3,7 @@
 
 ## About
 
-JSPWiki is a simple (well, not anymore) WikiWiki clone, written in Java
-and JSP.  A WikiWiki is a website which allows anyone to participate
-in its development.  JSPWiki supports all the traditional wiki features,
-as well as very detailed access control and security integration using JAAS. 
+JSPWiki is a simple (well, not anymore) WikiWiki clone, written in Java and JSP.  A WikiWiki is a website which allows anyone to participate in its development.  JSPWiki supports all the traditional wiki features, as well as very detailed access control and security integration using JAAS. 
 
 * For more information see https://jspwiki-wiki.apache.org/
 ___
@@ -34,12 +31,27 @@ The directory structure within the mounted directory is as follows:
 
 ```md
 jspwiki
-├── pages 
+├── pages
 ├── etc 
 ├── logs
 └── work
 ```
 ___
 ## Changes to the official [Docker image](https://jspwiki-wiki.apache.org/Wiki.jsp?page=Docker)
+
+* changed directory structure (see above)
+* modified policy to prevent page modifications without being authorized (except sandbox)
+* added InterWiki links for *Lotus Notes* and *AdBlock Plus*
+* completely disabled cache for `BasicAttachmentProvider`
+* using German language
 ___
 ## Customizing
+
+All parameters of the [JSPWiki configuration file](https://github.com/apache/jspwiki/blob/master/jspwiki-main/src/main/resources/ini/jspwiki.properties) can be overwritten using environment variables within the container's environment. Every "_" in the variables is converted to ".". To change the name attribute of your Wiki simply set the variable jspwiki_applicationName.
+
+```bash
+docker run --name jspwiki \
+  -p 8080:8080/tcp \
+  -e jspwiki_applicationName='MyWiki' \
+  ghcr.io/mbillen/jspwiki
+```

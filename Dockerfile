@@ -7,7 +7,7 @@ ARG JSPWIKI_VERSION=2.12.2
 #
 # set default environment entries to configure jspwiki
 ENV CATALINA_OPTS -Djava.security.egd=file:/dev/./urandom
-ENV LANG en_US.UTF-8
+ENV LANG de_DE.UTF-8
 ENV jspwiki_frontPage Main
 ENV jspwiki_pageProvider VersioningFileProvider
 ENV jspwiki_fileSystemProvider_pageDir /var/jspwiki/pages
