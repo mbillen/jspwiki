@@ -1,3 +1,5 @@
+#
+# use multi-platform tomcat image (https://github.com/docker-library/official-images/blob/master/library/tomcat)
 FROM tomcat:9.0-jdk17-temurin-focal
 
 WORKDIR $CATALINA_HOME

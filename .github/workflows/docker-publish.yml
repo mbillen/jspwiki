@@ -60,6 +60,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=JSPWiki multi-arch image
 
       - name: Sign the published Docker image
         if: ${{ github.event_name != 'pull_request' }}
