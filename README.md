@@ -1,5 +1,6 @@
 # JSPWiki Docker Image
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Release](https://img.shields.io/github/v/tag/mbillen/jspwiki.svg?logo=github&style=flat-square)](https://github.com/mbillen/jspwiki/tags)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mbillen/jspwiki/docker-publish.yml?label=ci&logo=github&style=flat-square)](https://github.com/mbillen/jspwiki/actions?workflow=docker)
 [![GitHub issues](https://img.shields.io/github/issues/mbillen/jspwiki?logo=github&style=flat-square)](https://github.com/mbillen/jspwiki/issues)
