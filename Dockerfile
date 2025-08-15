@@ -1,10 +1,11 @@
 #
 # use multi-platform tomcat image (https://github.com/docker-library/official-images/blob/master/library/tomcat)
-FROM tomcat:9.0-jdk17-temurin-focal
+FROM tomcat:9.0-jdk17-temurin
 
 WORKDIR $CATALINA_HOME
 
-ARG JSPWIKI_VERSION=2.12.2
+ARG JSPWIKI_VERSION=2.12.3
+ARG JSPWIKI_PAGES_VERSION=2.12.2
 
 #
 # set default environment entries to configure jspwiki
@@ -46,7 +47,7 @@ RUN set -x \
  && unzip -q -d $CATALINA_HOME/webapps/ROOT /tmp/JSPWiki.war \
  && rm /tmp/JSPWiki.war \
 # download and deploy wiki pages
- && wget -O /tmp/wikipages.zip -nv https://dlcdn.apache.org/jspwiki/${JSPWIKI_VERSION}/wikipages/jspwiki-wikipages-de-${JSPWIKI_VERSION}.zip \
+ && wget -O /tmp/wikipages.zip -nv https://archive.apache.org/dist/jspwiki/${JSPWIKI_PAGES_VERSION}/wikipages/jspwiki-wikipages-de-${JSPWIKI_PAGES_VERSION}.zip \
  && unzip -q -d /tmp /tmp/wikipages.zip \
  && mv /tmp/jspwiki-wikipages-de-*/* /var/jspwiki/pages/ \
  && rm -rf /tmp/jspwiki-wikipages-de-*
