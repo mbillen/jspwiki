@@ -4,25 +4,25 @@ FROM tomcat:9.0-jdk17-temurin
 
 WORKDIR $CATALINA_HOME
 
-ARG JSPWIKI_VERSION=2.12.3
+ARG JSPWIKI_VERSION=2.12.4
 ARG JSPWIKI_PAGES_VERSION=2.12.2
 
 #
 # set default environment entries to configure jspwiki
-ENV CATALINA_OPTS -Djava.security.egd=file:/dev/./urandom
-ENV LANG de_DE.UTF-8
-ENV jspwiki_frontPage Main
-ENV jspwiki_pageProvider VersioningFileProvider
-ENV jspwiki_fileSystemProvider_pageDir /var/jspwiki/pages
-ENV jspwiki_attachment_provider BasicAttachmentProvider
-ENV jspwiki_basicAttachmentProvider_storageDir /var/jspwiki/pages/attachments
-ENV jspwiki_basicAttachmentProvider_disableCache .*
-ENV jspwiki_workDir /var/jspwiki/work
-ENV jspwiki_xmlUserDatabaseFile /var/jspwiki/etc/userdatabase.xml
-ENV jspwiki_xmlGroupDatabaseFile /var/jspwiki/etc/groupdatabase.xml
-ENV jspwiki_use_external_logconfig true
-ENV jspwiki_interWikiRef_Notes Notes://%s
-ENV jspwiki_interWikiRef_abp abp:%s
+ENV CATALINA_OPTS=-Djava.security.egd=file:/dev/./urandom
+ENV LANG=de_DE.UTF-8
+ENV jspwiki_frontPage=Main
+ENV jspwiki_pageProvider=VersioningFileProvider
+ENV jspwiki_fileSystemProvider_pageDir=/var/jspwiki/pages
+ENV jspwiki_attachment_provider=BasicAttachmentProvider
+ENV jspwiki_basicAttachmentProvider_storageDir=/var/jspwiki/pages/attachments
+ENV jspwiki_basicAttachmentProvider_disableCache=.*
+ENV jspwiki_workDir=/var/jspwiki/work
+ENV jspwiki_xmlUserDatabaseFile=/var/jspwiki/etc/userdatabase.xml
+ENV jspwiki_xmlGroupDatabaseFile=/var/jspwiki/etc/groupdatabase.xml
+ENV jspwiki_use_external_logconfig=true
+ENV jspwiki_interWikiRef_Notes=Notes://%s
+ENV jspwiki_interWikiRef_abp=abp:%s
 
 #
 # install unzip utility
