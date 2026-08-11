@@ -47,7 +47,6 @@ jspwiki
 ## Supported Architectures
 
 - `linux/amd64`
-- `linux/arm/v7`
 - `linux/arm64`
 
 ## Changes to the official [Docker image](https://jspwiki-wiki.apache.org/Wiki.jsp?page=Docker)
